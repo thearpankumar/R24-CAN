@@ -1,19 +1,24 @@
 /home/arpan/.local/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/opt/clion/bin/ninja/linux/x64/ninja -G Ninja -S /home/arpan/PycharmProjects/RudraProjects/R24Core/CAN-Drivevr/zephyr-can -B /home/arpan/PycharmProjects/RudraProjects/R24Core/CAN-Drivevr/zephyr-can/cmake-build-debug
-Loading Zephyr default modules (Freestanding).
+Loading Zephyr default modules (Zephyr base (cached)).
 -- Application: /home/arpan/PycharmProjects/RudraProjects/R24Core/CAN-Drivevr/zephyr-can
 -- CMake version: 3.26.4
--- Found Python3: /usr/bin/python3.11 (found suitable exact version "3.11.3") found components: Interpreter 
 -- Cache files will be written to: /home/arpan/.cache/zephyr
 -- Zephyr version: 3.4.99 (/home/arpan/PycharmProjects/RudraProjects/R24Core/zephyrproject/zephyr)
-CMake Error at /home/arpan/PycharmProjects/RudraProjects/R24Core/zephyrproject/zephyr/cmake/modules/extensions.cmake:2815 (message):
-  BOARD is not being defined on the CMake command-line, in the environment or
-  by the app.
+-- Board: blackpill_f401cc
+CMake Error at /home/arpan/PycharmProjects/RudraProjects/R24Core/zephyrproject/zephyr/cmake/modules/snippets.cmake:92 (message):
+  Traceback (most recent call last):
+
+    File "/home/arpan/PycharmProjects/RudraProjects/R24Core/zephyrproject/zephyr/scripts/snippets.py", line 24, in <module>
+      import pykwalify.core
+
+  ModuleNotFoundError: No module named 'pykwalify'
+
 Call Stack (most recent call first):
-  /home/arpan/PycharmProjects/RudraProjects/R24Core/zephyrproject/zephyr/cmake/modules/boards.cmake:52 (zephyr_check_cache)
+  /home/arpan/PycharmProjects/RudraProjects/R24Core/zephyrproject/zephyr/cmake/modules/snippets.cmake:121 (zephyr_process_snippets)
   /home/arpan/PycharmProjects/RudraProjects/R24Core/zephyrproject/zephyr/cmake/modules/zephyr_default.cmake:115 (include)
   /home/arpan/PycharmProjects/RudraProjects/R24Core/zephyrproject/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:66 (include)
-  /home/arpan/PycharmProjects/RudraProjects/R24Core/zephyrproject/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:159 (include_boilerplate)
-  CMakeLists.txt:6 (find_package)
+  /home/arpan/PycharmProjects/RudraProjects/R24Core/zephyrproject/zephyr/share/zephyr-package/cmake/ZephyrConfig.cmake:97 (include_boilerplate)
+  CMakeLists.txt:5 (find_package)
 
 
 -- Configuring incomplete, errors occurred!

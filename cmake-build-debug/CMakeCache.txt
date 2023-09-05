@@ -20,6 +20,21 @@ APPLICATION_BINARY_DIR:PATH=/home/arpan/PycharmProjects/RudraProjects/R24Core/CA
 //Application Source Directory
 APPLICATION_SOURCE_DIR:PATH=/home/arpan/PycharmProjects/RudraProjects/R24Core/CAN-Drivevr/zephyr-can
 
+//Selected board
+BOARD:STRING=blackpill_f401cc
+
+//Path to a file.
+BOARD_DIR:PATH=/home/arpan/PycharmProjects/RudraProjects/R24Core/zephyrproject/zephyr/boards/arm/blackpill_f401cc
+
+//Selected board
+CACHED_BOARD:STRING=blackpill_f401cc
+
+//Selected shield
+CACHED_SHIELD:STRING=
+
+//Selected snippet
+CACHED_SNIPPET:STRING=
+
 //Path to a program.
 CCACHE_FOUND:FILEPATH=/usr/bin/ccache
 
@@ -93,6 +108,8 @@ _Python3_EXECUTABLE:INTERNAL=/usr/bin/python3.11
 //Python3 Properties
 _Python3_INTERPRETER_PROPERTIES:INTERNAL=Python;3;11;3;64;;cpython-311-x86_64-linux-gnu.so;abi3;/usr/lib/python3.11;/usr/lib/python3.11;/usr/lib/python3.11/site-packages;/usr/lib/python3.11/site-packages
 _Python3_INTERPRETER_SIGNATURE:INTERNAL=3239196702bb9bea75667d5eee07088e
+//Interpreter reason failure
+_Python3_Interpreter_REASON_FAILURE:INTERNAL=
 //NumPy reason failure
 _Python3_NumPy_REASON_FAILURE:INTERNAL=
 
