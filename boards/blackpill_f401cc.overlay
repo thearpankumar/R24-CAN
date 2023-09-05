@@ -1,26 +1,20 @@
+&spi1 {
+    status = "okay";
+    cs-gpios = <&gpiob 5 GPIO_ACTIVE_LOW>;
 
-/ {
-    compatible = "st,stm32f401", "st,stm32f4", "zephyr,stm32f4";
-
-    fragment@0 {
-        target = <&spi1>;
-        __overlay__ {
-            status = "okay";
-        };
-    };
-
-    fragment@1 {
-        target-path = "/";
-        __overlay__ {
-            can0: can@0 {
-                compatible = "microchip,mcp2515";
-                spi-max-frequency = <1000000>;
-                interrupt-parent = <&exti>;
-                interrupts = <0 1>;
-                interrupt-cells = <0>;
-                label = "CAN_0";
-                status = "okay";
-            };
-        };
+    can1: mcp2515@0 {
+        compatible = "microchip,mcp2515";
+        reg = <0>;
+        spi-max-frequency = <10000000>;
+        int-gpios = <&gpioa 10 GPIO_ACTIVE_LOW>;
+        status = "okay";
+        #address-cells = <1>;
+        #size-cells = <0>;
+        osc-freq = <20000000>;
+        bus-speed = <500000>;
+        sjw = <1>;
+        prop-seg = <7>;
+        phase-seg1 = <8>;
+        phase-seg2 = <7>;
     };
 };

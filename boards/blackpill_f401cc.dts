@@ -1,0 +1,15 @@
+/ {
+    model = "WeAct Studio Black Pill V3.0 Board";
+    compatible = "weact,blackpill-f401cc";
+
+    chosen {
+        zephyr,canbus = &can22;
+    };
+};
+
+&can22 {
+    status = "disabled";
+    pinctrl-0 = <19 20>;
+    pinctrl-names = "default";
+    bus-speed = <125000>;
+};
